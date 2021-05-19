@@ -1,0 +1,38 @@
+.ChosenPokemon img{
+    border: 1px solid black;
+    width: 100%;
+    background: white;
+    border: 3px solid rgb(2,27,75);
+}
+.PokemonName{
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.characterWrapper div{
+    margin: auto ;
+}
+.characterWrapper{
+    border-bottom: 3px solid indianred;
+    vertical-align: middle;
+    height: 25px;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: min-content min-content min-content min-content min-content min-content min-content min-content min-content;
+    gap: 0px 0px;
+    grid-template-areas:
+            "Name Value";
+}
+.Name{
+    color: white;
+    grid-area: Name;
+    text-align: center;
+}
+.Value{
+    color: white;
+    grid-area: Value;
+    text-align: center;
+}

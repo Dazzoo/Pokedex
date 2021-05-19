@@ -1,0 +1,153 @@
+@import url(https://fonts.googleapis.com/css?family=Lora);
+
+nav {
+    width: 100px;
+    margin: 0 auto 30px;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.topmenu > li {
+    display: inline-block;
+    margin-right: 20px;
+    position: relative;
+}
+.topmenu > li:last-child {
+    margin-right: 0;
+}
+a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    outline: none;
+    font-family: 'Lora', serif;
+    transition: .5s linear;
+}
+.fa {
+    font-family: "FontAwesome";
+    color: inherit;
+    padding-left: 10px;
+}
+.dropDownItem{
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid black;
+}
+.dropDownItem:hover{
+    cursor: pointer;
+    font-weight: bold;
+}
+.submenu {
+    text-align: center;
+    padding:auto;
+    width: 100px;
+    height: 10px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+}
+.submenu2 {
+    text-align: center;
+    padding:auto;
+    width: 100px;
+    height: 10px;
+    position: absolute;
+    top: 0%;
+    left: 100%;
+    z-index: 10;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+}
+.one .topmenu {
+    margin-top: 10px;
+    color: white;
+    font-size: 22px;
+    height: 50px;
+    border-radius: 10px;
+    width: 100%;
+    background-image: linear-gradient(to bottom, #5a4dae, #483d8b);
+    border: 2px solid black;
+}
+
+.one .submenu {
+    display: none;
+    background: #b19891;
+}
+.one ul li:hover .submenu {
+    display: block;
+}
+.submenu li  {
+    border-bottom: 1px solid rgba(255,255,255,.3);
+    color: white;
+}
+
+.normal{
+    background-color: rgba(169,170,121,1);
+}
+.fighting{
+    background-color: rgba(193,44,35,1);
+}
+.flying{
+    background-color: rgba(169,145,240,1);
+}
+.poison{
+    background-color: rgba(161,62,161,1);
+}
+.ground{
+    background-color: rgba(225,193,104,1);
+}
+.rock{
+    background-color: rgba(185,161,53,1);
+}
+.bug{
+    background-color: rgba(169,185,26,1);
+}
+.ghost{
+    background-color: rgba(113,87,153,1);
+}
+.steel{
+    background-color: rgba(185,185,209,1) ;
+}
+.fire{
+    background-color: rgba(240,129,44,1);
+}
+.water{
+    background-color: rgba(104,145,240,1);
+}
+.grass{
+    background-color: rgba(121,201,79,1);
+}
+.electric{
+    background-color: rgba(248,209,44,1);
+}
+.psychic{
+    background-color: rgba(248,87,137,1);
+}
+.ice{
+    background-color: rgba(153,217,217,1);
+}
+.dragon{
+    background-color: rgba(113,53,248,1);
+}
+.dark{
+    background-color: rgba(113,87,70,1);
+}
+.fairy{
+    background-color: rgba(238,179,238,1);
+}
+.unknown{
+    background-color: rgba(20,152,133,1);
+}
+.shadow{
+    background-color: rgba(128,128,128,1);
+}

@@ -1,7 +1,13 @@
 .App {
-  text-align: center;
+  border: 1px solid black;
+  margin: 0 auto;
+  min-height: 100vh;
+  max-width: 1200px;
+  background-image: url("https://wallpapercave.com/wp/wp2595119.jpg");
 }
-
+body{
+  font-family: 'Montserrat', sans-serif;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +41,72 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.normal{
+  background-image: linear-gradient(to bottom, rgba(169,170,121,0.5), rgba(169,170,121,1));
+}
+.fighting{
+  background-image: linear-gradient(to bottom, rgba(193,44,35,0.5), rgba(193,44,35,1));
+}
+.flying{
+  background-image: linear-gradient(to bottom, rgba(169,145,240,0.5), rgba(169,145,240,1));
+}
+.poison{
+  background-image: linear-gradient(to bottom, rgba(161,62,161,0.5), rgba(161,62,161,1));
+
+}
+.ground{
+  background-image: linear-gradient(to bottom, rgba(225,193,104,0.5), rgba(225,193,104,1));
+
+}
+.rock{
+  background-image: linear-gradient(to bottom, rgba(185,161,53,0.5), rgba(185,161,53,1));
+
+}
+.bug{
+  background-image: linear-gradient(to bottom, rgba(169,185,26,0.5), rgba(169,185,26,1));
+
+}
+.ghost{
+  background-image: linear-gradient(to bottom, rgba(113,87,153,0.5), rgba(113,87,153,1));
+
+}
+.steel{
+  background-image: linear-gradient(to bottom, rgba(185,185,209,0.5), rgba(185,185,209,1));
+
+}
+.fire{
+  background-image: linear-gradient(to bottom, rgba(240,129,44,0.5), rgba(240,129,44,1));
+
+}
+.water{
+  background-image: linear-gradient(to bottom, rgba(104,145,240,0.5), rgba(104,145,240,1));
+}
+.grass{
+  background-image: linear-gradient(to bottom, rgba(121,201,79,0.5), rgba(121,201,79,1));
+}
+.electric{
+  background-image: linear-gradient(to bottom, rgba(248,209,44,0.5), rgba(248,209,44,1));
+}
+.psychic{
+  background-image: linear-gradient(to bottom, rgba(248,87,137,0.5), rgba(248,87,137,1));
+}
+.ice{
+  background-image: linear-gradient(to bottom, rgba(153,217,217,0.5), rgba(153,217,217,1));
+}
+.dragon{
+  background-image: linear-gradient(to bottom, rgba(113,53,248,0.5), rgba(113,53,248,1));
+}
+.dark{
+  background-image: linear-gradient(to bottom, rgba(113,87,70,0.5), rgba(113,87,70,1));
+}
+.fairy{
+  background-image: linear-gradient(to bottom, rgba(238,179,238,0.5), rgba(238,179,238,1));
+}
+.unknown{
+  background-image: linear-gradient(to bottom, rgba(20,152,133,0.5), rgba(20,152,133,1));
+}
+.shadow{
+  background-image: linear-gradient(to bottom, rgba(128,128,128,0.5), rgba(128,128,128,1));
 }
