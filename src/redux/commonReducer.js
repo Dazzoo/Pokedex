@@ -20,16 +20,15 @@ const commonReducer = (state = initialState, action) => {
     }
 }
 
-PokedexAPI.getPokemonStats(22)
 
 export const SetPokemonsList = (Pokemons) => ({type: 'COMMON/SET-POKEMON-LIST', Pokemons })
 export const SetActivePokemon = (Pokemon) => ({type: 'COMMON/SET-ACTIVE-POKEMON', Pokemon })
 
 
 
-export const GetPokemonsList = (PokemonsLimit) => async (dispatch) => {
+export const GetPokemonsList = (PokemonsLimit, Offset) => async (dispatch) => {
     try {
-        let PokemonsArray = await PokedexAPI.getPokemonsList(PokemonsLimit)
+        let PokemonsArray = await PokedexAPI.getPokemonsList(PokemonsLimit, Offset)
         dispatch(SetPokemonsList(PokemonsArray))
     } catch (error) {
         alert(error.message)

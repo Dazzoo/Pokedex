@@ -13,7 +13,7 @@ const PokemonsList = (props) => {
     return (
             <>
             {props.PokemonsList.map(Pokemon =>
-                    props.PokemonsType !== null && Pokemon.types[0].type.name == props.PokemonsType   ?
+                    props.PokemonsType && Pokemon.types[0].type.name == props.PokemonsType   ?
             <div className={cn(styles.PokemonCard, Pokemon.types[0].type.name)} onClick={() => props.GetActivePokemon(Pokemon.id) } key={Pokemon.id} >
                 <div>
                     <img alt="Pokedex" className={styles.PokemonImg} src={"https://pokeres.bastionbot.org/images/pokemon/" + Pokemon.id + ".png" }/>

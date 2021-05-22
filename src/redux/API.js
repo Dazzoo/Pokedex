@@ -8,8 +8,8 @@ const instance = axios.create({
 
 
 export const PokedexAPI = {
-    async getPokemonsList(PokemonsLimit = 12){
-        let results = await instance.get(`https://pokeapi.co/api/v2/pokemon/?limit=` + PokemonsLimit)
+    async getPokemonsList(PokemonsLimit = 12, Offset = 0){
+        let results = await instance.get(`https://pokeapi.co/api/v2/pokemon/?limit=` + PokemonsLimit + "&offset=" + Offset)
         let PokemonsUrl = await results.data.results.map(result => result.url)
         let Pokemons = []
         for (let i = 0; i < PokemonsUrl.length; i++){

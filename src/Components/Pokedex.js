@@ -13,19 +13,19 @@ import cn from 'classnames'
 
 const Pokedex = (props) => {
 
-    const [PokemonsLimit, SetPokemonsLimit] = useState(12)
+    const [Offset, SetOffset] = useState(0)
     const [PokemonsType, SetPokemonsType] = useState(null)
-    const [LoadMoreinProgress, SetLoadMoreinProgress] = useState(false)
+    const [LoadMoreInProgress, SetLoadMoreInProgress] = useState(false)
 
     useEffect( async() => {
-        await props.GetPokemonsList(PokemonsLimit)
-        SetLoadMoreinProgress(false)
-    },[PokemonsLimit])
+        await props.GetPokemonsList(12, Offset)
+        SetLoadMoreInProgress(false)
+    },[Offset])
 
     const LoadMoreOnClick = (e) => {
         e.preventDefault()
-        SetPokemonsLimit((prevState) => {return prevState + 12})
-        SetLoadMoreinProgress(true)
+        SetOffset((prevState) =>  {return prevState + 12})
+        SetLoadMoreInProgress(true)
 
     }
 
@@ -50,8 +50,8 @@ const Pokedex = (props) => {
                     : null
                 }
                 <DropDownMenu SetPokemonsType={SetPokemonsType} />
-            <PokemonsList {...props} PokemonsLimit={PokemonsLimit} PokemonsType={PokemonsType} />
-                {LoadMoreinProgress ?
+            <PokemonsList {...props}  PokemonsType={PokemonsType} />
+                {LoadMoreInProgress ?
                     <div  className={styles.LoadMore} >
                     <PreloaderRainbow/>
                     </div>
