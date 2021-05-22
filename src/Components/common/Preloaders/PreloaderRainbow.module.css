@@ -1,0 +1,9 @@
+.Rainbow{
+    width: 65px;
+    height: 65px;
+    display: inline-block;
+}
+.RainbowWrapper{
+    margin: 0 50%;
+    display: inline-block;
+}

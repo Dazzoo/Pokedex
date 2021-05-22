@@ -16,7 +16,7 @@ const PokemonsList = (props) => {
                     props.PokemonsType !== null && Pokemon.types[0].type.name == props.PokemonsType   ?
             <div className={cn(styles.PokemonCard, Pokemon.types[0].type.name)} onClick={() => props.GetActivePokemon(Pokemon.id) } key={Pokemon.id} >
                 <div>
-                    <img className={styles.PokemonImg} src={"https://pokeres.bastionbot.org/images/pokemon/" + Pokemon.id + ".png" }/>
+                    <img alt="Pokedex" className={styles.PokemonImg} src={"https://pokeres.bastionbot.org/images/pokemon/" + Pokemon.id + ".png" }/>
                 </div>
             <div className={styles.PokemonName} >
                 {UpperFirstLetter(Pokemon.name)}
