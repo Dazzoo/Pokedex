@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.css": "/Pokedex/static/css/main.766796ee.chunk.css",
-    "main.js": "/Pokedex/static/js/main.dec29172.chunk.js",
-    "main.js.map": "/Pokedex/static/js/main.dec29172.chunk.js.map",
-    "runtime-main.js": "/Pokedex/static/js/runtime-main.2e8e2cc0.js",
-    "runtime-main.js.map": "/Pokedex/static/js/runtime-main.2e8e2cc0.js.map",
-    "static/js/2.02de6449.chunk.js": "/Pokedex/static/js/2.02de6449.chunk.js",
-    "static/js/2.02de6449.chunk.js.map": "/Pokedex/static/js/2.02de6449.chunk.js.map",
-    "static/js/3.d85a8d33.chunk.js": "/Pokedex/static/js/3.d85a8d33.chunk.js",
-    "static/js/3.d85a8d33.chunk.js.map": "/Pokedex/static/js/3.d85a8d33.chunk.js.map",
-    "index.html": "/Pokedex/index.html",
-    "static/css/main.766796ee.chunk.css.map": "/Pokedex/static/css/main.766796ee.chunk.css.map",
-    "static/js/2.02de6449.chunk.js.LICENSE.txt": "/Pokedex/static/js/2.02de6449.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/Pokedex/static/media/logo.6ce24c58.svg"
+    "main.css": "/pokedex/static/css/main.ff02a1a9.chunk.css",
+    "main.js": "/pokedex/static/js/main.9eadce4e.chunk.js",
+    "main.js.map": "/pokedex/static/js/main.9eadce4e.chunk.js.map",
+    "runtime-main.js": "/pokedex/static/js/runtime-main.3928df32.js",
+    "runtime-main.js.map": "/pokedex/static/js/runtime-main.3928df32.js.map",
+    "static/js/2.a6ba3c49.chunk.js": "/pokedex/static/js/2.a6ba3c49.chunk.js",
+    "static/js/2.a6ba3c49.chunk.js.map": "/pokedex/static/js/2.a6ba3c49.chunk.js.map",
+    "static/js/3.2777adc7.chunk.js": "/pokedex/static/js/3.2777adc7.chunk.js",
+    "static/js/3.2777adc7.chunk.js.map": "/pokedex/static/js/3.2777adc7.chunk.js.map",
+    "index.html": "/pokedex/index.html",
+    "static/css/main.ff02a1a9.chunk.css.map": "/pokedex/static/css/main.ff02a1a9.chunk.css.map",
+    "static/js/2.a6ba3c49.chunk.js.LICENSE.txt": "/pokedex/static/js/2.a6ba3c49.chunk.js.LICENSE.txt",
+    "static/media/Rainbow.6d776ca1.gif": "/pokedex/static/media/Rainbow.6d776ca1.gif",
+    "static/media/logo.6ce24c58.svg": "/pokedex/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.2e8e2cc0.js",
-    "static/js/2.02de6449.chunk.js",
-    "static/css/main.766796ee.chunk.css",
-    "static/js/main.dec29172.chunk.js"
+    "static/js/runtime-main.3928df32.js",
+    "static/js/2.a6ba3c49.chunk.js",
+    "static/css/main.ff02a1a9.chunk.css",
+    "static/js/main.9eadce4e.chunk.js"
   ]
 }
