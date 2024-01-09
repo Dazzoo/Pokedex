@@ -41,8 +41,9 @@ const Pokedex = (props) => {
 
     return (
             <>
-                <div className={styles.PokedexName}>Pokedex</div>
             <div className={styles.PokedexWrapper} >
+            <div className={styles.PokedexName}>Pokedex</div>
+
                 {props.ActivePokemon ?
                     <div className={styles.ChosenPokemonWrapper}>
                         <ChosenPokemon {...props} UpperFirstLetter={UpperFirstLetter} />

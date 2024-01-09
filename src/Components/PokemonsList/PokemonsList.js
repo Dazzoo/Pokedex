@@ -8,7 +8,7 @@ import cn from 'classnames'
 
 
 const PokemonsList = (props) => {
-    console.log(props)
+    console.log(props.PokemonsList)
 
     return (
             <>
@@ -16,7 +16,7 @@ const PokemonsList = (props) => {
                     props.PokemonsType && Pokemon.types[0].type.name == props.PokemonsType   ?
             <div className={cn(styles.PokemonCard, Pokemon.types[0].type.name)} onClick={() => props.GetActivePokemon(Pokemon.id) } key={Pokemon.id} >
                 <div>
-                    <img alt="Pokedex" className={styles.PokemonImg} src={"https://pokeres.bastionbot.org/images/pokemon/" + Pokemon.id + ".png" }/>
+                    <img alt="Pokedex" className={styles.PokemonImg} src={Pokemon.sprites.front_default}/>
                 </div>
             <div className={styles.PokemonName} >
                 {UpperFirstLetter(Pokemon.name)}
@@ -30,7 +30,7 @@ const PokemonsList = (props) => {
 
                         <div className={cn(styles.PokemonCard, Pokemon.types[0].type.name)} onClick={() => props.GetActivePokemon(Pokemon.id) } key={Pokemon.id} >
                             <div>
-                                <img className={styles.PokemonImg} src={"https://pokeres.bastionbot.org/images/pokemon/" + Pokemon.id + ".png" }/>
+                                <img className={styles.PokemonImg} src={Pokemon.sprites.front_default}/>
                             </div>
                             <div className={styles.PokemonName} >
                                 {UpperFirstLetter(Pokemon.name)}

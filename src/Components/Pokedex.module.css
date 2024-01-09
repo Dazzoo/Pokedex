@@ -1,7 +1,7 @@
 .PokedexWrapper{
-    display: inline-block;
-    width: 60%;
+    width: 100%!important;
     margin-left: 1%;
+    border: 1px solid black;
 }
 .ChosenPokemonWrapper{
     background-image: url("https://cdn.wallpapersafari.com/28/70/nak4oe.jpg");
@@ -75,6 +75,7 @@
     border-color: transparent;
     cursor: pointer;
 }
+
 .PokedexName{
     font-weight: bold;
     text-align: center;
