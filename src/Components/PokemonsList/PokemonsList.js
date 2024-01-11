@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react'
-import styles from '../Pokedex.module.css'
+import '../Pokedex.css'
 import UpperFirstLetter from '../../common/UpperFirstLetter'
 import cn from 'classnames'
+import PokemonCard from '../../Components/Card/PokemonCard'
 
 
 
@@ -13,33 +14,12 @@ const PokemonsList = (props) => {
     return (
             <>
             {props.PokemonsList.map(Pokemon =>
-                    props.PokemonsType && Pokemon.types[0].type.name == props.PokemonsType   ?
-            <div className={cn(styles.PokemonCard, Pokemon.types[0].type.name)} onClick={() => props.GetActivePokemon(Pokemon.id) } key={Pokemon.id} >
-                <div>
-                    <img alt="Pokedex" className={styles.PokemonImg} src={Pokemon.sprites.front_default}/>
-                </div>
-            <div className={styles.PokemonName} >
-                {UpperFirstLetter(Pokemon.name)}
+            <div className='PokemonCardWrapper' >
+            <PokemonCard
+                cover_img_url={Pokemon.sprites.front_default}
+                name={Pokemon.name?.charAt(0).toUpperCase() + Pokemon.name?.slice(1)}
+            />
             </div>
-                <div className={styles.typesWrapper}>
-                    {Pokemon.types.map(type =>  <div className={cn(type.type.name, styles.types)} >{UpperFirstLetter(type.type.name)}</div>)}
-                </div>
-            </div>
-                    :
-                        props.PokemonsType == null ?
-
-                        <div className={cn(styles.PokemonCard, Pokemon.types[0].type.name)} onClick={() => props.GetActivePokemon(Pokemon.id) } key={Pokemon.id} >
-                            <div>
-                                <img className={styles.PokemonImg} src={Pokemon.sprites.front_default}/>
-                            </div>
-                            <div className={styles.PokemonName} >
-                                {UpperFirstLetter(Pokemon.name)}
-                            </div>
-                            <div className={styles.typesWrapper}>
-                                {Pokemon.types.map(type =>  <div className={cn(type.type.name, styles.types)} >{UpperFirstLetter(type.type.name)}</div>)}
-                            </div>
-                        </div> : null
-
             )}
 
             </>

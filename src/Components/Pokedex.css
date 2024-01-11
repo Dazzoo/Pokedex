@@ -1,0 +1,13 @@
+.MainPageWrapper{
+    border: 1px solid black;
+    margin: 8rem 6rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    
+}
+.PokemonCardWrapper{
+    margin: 1rem 2rem;
+}
