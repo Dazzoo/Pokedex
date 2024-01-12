@@ -1,16 +1,44 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { compose } from 'redux'
+import {connect} from 'react-redux'
+import styled from 'styled-components';
 import './PokemonCard.css'
 
-const PokemonCard = ({cover_img_url, name}) => {
+const PokemonCard = ({cover_img_url, name, PokemonTypes, types}) => {
+    const [color, setColor] = useState('#ff9966');
+
+    console.log('types', types)
+
+    useEffect(() => {
+        const currentColor = PokemonTypes.find(t => t.name === types[0]?.type.name)?.color
+        console.log(currentColor)
+        setColor(currentColor)
+    }, [types])
+
+    const Back = styled.div`
+        &::before {
+            background: linear-gradient(
+            90deg,
+            transparent,
+            ${color},
+            ${color},
+            ${color},
+            ${color},
+            transparent
+            );
+        }
+        `;
+
     return (
-        <div className="card">
+        <>
+            <div className="card">
             <div className="content">
-                <div className="back">
+                <Back  className={`back`}>
                 <div className="back-content">
                 <img className="img" src={cover_img_url}/>
                     <strong>{name}</strong>
                 </div>
-                </div>
+                </Back >
                 <div className="front">
                 
                 <div className="img">
@@ -45,7 +73,19 @@ const PokemonCard = ({cover_img_url, name}) => {
                 </div>
             </div>
             </div>
+        </>
     )
 }
 
-export default PokemonCard
+const mapStateToProps = (state) => {
+    return {
+        PokemonTypes: state.commonData.PokemonTypes
+    }
+}
+
+
+const PokemonCardWrapper = compose(
+    connect(mapStateToProps,{}))(PokemonCard)
+
+
+export default PokemonCardWrapper

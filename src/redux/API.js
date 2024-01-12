@@ -38,6 +38,10 @@ export const PokedexAPI = {
                         Attack: PokemonAttack, Defense: PokemonDefense, SPAttack: PokemonSPAttack, SPDefense: PokemonSPDefense,
                         Speed: PokemonSpeed, Weight: PokemonWeight, id: PokemonId})
         return PokemonStats
+    },
+    async getPokemonTypes(){
+        let results = await instance.get(`https://pokeapi.co/api/v2/type`)
+        return results
     }
 
 }

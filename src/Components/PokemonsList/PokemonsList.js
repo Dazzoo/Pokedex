@@ -18,6 +18,7 @@ const PokemonsList = (props) => {
             <PokemonCard
                 cover_img_url={Pokemon.sprites.front_default}
                 name={Pokemon.name?.charAt(0).toUpperCase() + Pokemon.name?.slice(1)}
+                types={Pokemon.types}
             />
             </div>
             )}

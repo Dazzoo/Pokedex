@@ -7,7 +7,7 @@ import { withRouter } from "react-router"
 import { compose } from 'redux'
 import {Provider} from "react-redux"
 import { Redirect } from "react-router-dom"
-import {GetPokemonsList, GetActivePokemon} from './redux/commonReducer'
+import {GetPokemonsList, GetActivePokemon, getPokemonTypes, ClearPokemonsList} from './redux/commonReducer'
 
 function App(props) {
   return (
@@ -20,14 +20,15 @@ function App(props) {
 const mapStateToProps = (state) => {
     return {
         PokemonsList: state.commonData.PokemonsList,
-        ActivePokemon: state.commonData.ActivePokemon
+        ActivePokemon: state.commonData.ActivePokemon,
+        PokemonTypes: state.commonData.PokemonTypes
     }
 }
 
 
-let AppContainer = compose(
+const AppContainer = compose(
     withRouter,
-    connect(mapStateToProps,{GetPokemonsList, GetActivePokemon}))(App)
+    connect(mapStateToProps,{GetPokemonsList, GetActivePokemon, getPokemonTypes, ClearPokemonsList}))(App)
 
 
 export default AppContainer;
