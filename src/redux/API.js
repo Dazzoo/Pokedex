@@ -17,7 +17,7 @@ export const PokedexAPI = {
                 response =>
                     Pokemons.push(response.data))
         }
-        return Pokemons
+        return {PokemonsList: Pokemons, all_count: results.data.count }
     },
     async getPokemonStats(id){
         let results = await instance.get(`https://pokeapi.co/api/v2/pokemon/` + id)

@@ -4,18 +4,18 @@ import {connect} from 'react-redux'
 import styled from 'styled-components';
 import './PokemonCard.css'
 
-const PokemonCard = ({cover_img_url, name, PokemonTypes, types}) => {
+const PokemonCard = ({back_img_url, front_img_url, name, PokemonTypes, types, sprites, 
+    hp, attack, defense, speed, spAttack, spDefense}) => {
     const [color, setColor] = useState('#ff9966');
 
-    console.log('types', types)
+
 
     useEffect(() => {
         const currentColor = PokemonTypes.find(t => t.name === types[0]?.type.name)?.color
-        console.log(currentColor)
         setColor(currentColor)
     }, [types])
 
-    const Back = styled.div`
+    const PokemonColorBack = styled.div`
         &::before {
             background: linear-gradient(
             90deg,
@@ -33,27 +33,42 @@ const PokemonCard = ({cover_img_url, name, PokemonTypes, types}) => {
         <>
             <div className="card">
             <div className="content">
-                <Back  className={`back`}>
+                <PokemonColorBack  className={`back`}>
                 <div className="back-content">
-                <img className="img" src={cover_img_url}/>
+                <img className="img" src={back_img_url}/>
                     <strong>{name}</strong>
                 </div>
-                </Back >
+                </PokemonColorBack >
                 <div className="front">
                 
                 <div className="img">
-                    <div className="circle">
-                    </div>
-                    <div className="circle" id="right">
-                    </div>
-                    <div className="circle" id="bottom">
+                    <div className='front-img' style={{backgroundColor: `${color}`}} >
+                        <img className="img" src={front_img_url}/>
                     </div>
                 </div>
 
                 <div className="front-content">
-                    <small className="badge">Pasta</small>
+                    <small className="badge">{name}</small>
                     <div className="description">
-                    <div className="title">
+                        <div >
+                        <strong style={{ color: '#FFC0CB' }} >HP:</strong> {hp}
+                        </div>
+                        <div>
+                        <strong style={{ color: '#00BFFF' }} >Attack:</strong> {attack}
+                        </div>
+                        <div>
+                        <strong style={{ color: '#90EE90' }} >Defense:</strong> {defense}
+                        </div>
+                        <div>
+                        <strong style={{ color: '#FFFF99' }} >Speed:</strong> {speed}
+                        </div>
+                        <div>
+                        <strong style={{ color: '#F4A460' }} >Special Attack:</strong> {spAttack}
+                        </div>
+                        <div>
+                        <strong style={{ color: '#EE82EE' }} >Special Defense:</strong> {spDefense}
+                        </div>
+                    {/* <div className="title">
                         <p className="title">
                         <strong>Spaguetti Bolognese</strong>
                         </p>
@@ -67,7 +82,7 @@ const PokemonCard = ({cover_img_url, name, PokemonTypes, types}) => {
                     </div>
                     <p className="card-footer">
                         30 Mins &nbsp; | &nbsp; 1 Serving
-                    </p>
+                    </p>     */}
                     </div>
                 </div>
                 </div>

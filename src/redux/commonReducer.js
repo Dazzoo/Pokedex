@@ -3,7 +3,10 @@ import { PokedexAPI } from './API'
 let initialState = {
     PokemonsList: [],
     ActivePokemon: null,
-    PokemonTypes: []
+    PokemonTypes: [],
+    PokemonsCount: {
+        all: 0
+    }
 }
 
 const commonReducer = (state = initialState, action) => {
@@ -24,6 +27,12 @@ const commonReducer = (state = initialState, action) => {
             return{...state,
                 PokemonTypes: action.Types
             }
+            case 'COMMON/SET-POKEMON-COUNT-ALL':
+                return{...state,
+                    PokemonsCount: {
+                        all: action.count
+                    }
+                }
         default:
             return state;
     }
@@ -34,12 +43,16 @@ export const SetPokemonsList = (Pokemons) => ({type: 'COMMON/SET-POKEMON-LIST', 
 export const ClearPokemonsList = () => ({type: 'COMMON/CLEAR-POKEMON-LIST' })
 export const SetActivePokemon = (Pokemon) => ({type: 'COMMON/SET-ACTIVE-POKEMON', Pokemon })
 export const SetPokemonTypes = (Types) => ({type: 'COMMON/SET-POKEMON-TYPES', Types })
+export const SetAllPokemonsCount = (count) => ({type: 'COMMON/SET-POKEMON-COUNT-ALL', count })
 
 
-export const GetPokemonsList = (PokemonsLimit, Offset, Page) => async (dispatch) => {
+export const GetPokemonsList = (PokemonsLimit, Offset, SetLoadMoreInProgress) => async (dispatch) => {
     try {
-        const PokemonsArray = await PokedexAPI.getPokemonsList(PokemonsLimit, Offset)
-        dispatch(SetPokemonsList(PokemonsArray))
+        SetLoadMoreInProgress(true)
+        const Pokemons = await PokedexAPI.getPokemonsList(PokemonsLimit, Offset)
+        dispatch(SetAllPokemonsCount(Pokemons.all_count))
+        dispatch(SetPokemonsList(Pokemons.PokemonsList))
+        SetLoadMoreInProgress(false)
     } catch (error) {
         alert(error.message)
         console.log(error.message)
@@ -51,7 +64,6 @@ export const GetActivePokemon = (id) => async (dispatch) => {
     try {
         const PokemonStats = await PokedexAPI.getPokemonStats(id)
         dispatch(SetActivePokemon(PokemonStats))
-        console.log(PokemonStats)
 
     } catch (error) {
         alert(error.message)

@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import React, {useEffect, useState} from 'react'
 import './App.css';
 import Pokedex from './Components/Pokedex'
+import Footer from './Components/Layout/Footer'
 import {connect} from 'react-redux'
 import { withRouter } from "react-router"
 import { compose } from 'redux'
@@ -13,6 +14,8 @@ function App(props) {
   return (
     <div className="App" >
         <Pokedex {...props}/>
+        <Footer
+         />
     </div>
   )
 }
@@ -21,7 +24,8 @@ const mapStateToProps = (state) => {
     return {
         PokemonsList: state.commonData.PokemonsList,
         ActivePokemon: state.commonData.ActivePokemon,
-        PokemonTypes: state.commonData.PokemonTypes
+        PokemonTypes: state.commonData.PokemonTypes,
+        PokemonsCount: state.commonData.PokemonsCount
     }
 }
 

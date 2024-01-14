@@ -1,13 +1,38 @@
 .MainPageWrapper{
-    /* border: 1px solid black; */
     margin: 8rem 6rem;
     display: flex;
     flex-wrap: wrap;
     justify-items: center;
     justify-content: center;
     align-items: center;
-    
+    overflow-y: hidden!important;
 }
+.preloader-big{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    img{
+        width: 200px;
+    }
+}
+.preloader-more-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    .img-preloader{
+        width: 200px;
+    }
+}
+
 .PokemonCardWrapper{
     margin: 1rem 2rem;
+}
+@media (max-width: 900px) {
+    .preloader-big{
+        .img-preloader{
+            width: 200px!important;
+        }
+    }
 }
