@@ -1,11 +1,11 @@
 import React from 'react'
-import Logo from '../../assets/logo.png'
+import Logo from '../../../assets/logo.png'
 import './Footer.scss'
 
 
 function Footer(props) {
     return (
-        <div className="footer">
+        <footer className="footer">
 
         <a href="#" className="logo">
         <img    
@@ -27,13 +27,8 @@ function Footer(props) {
             </div>
             <span className="copyright">© Copyright 2023 by Yurii Shushanskyi</span>
         </div>
-        </div>
+        </footer>
 
-    //   <div className="Footer" >
-    //     <div className='copyright' >
-    //     © Copyright 2023. Made by Yurii Shushanskyi
-    //     </div>
-    //   </div>
     )
   }
 

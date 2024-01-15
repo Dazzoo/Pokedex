@@ -2,7 +2,8 @@ import logo from './logo.svg';
 import React, {useEffect, useState} from 'react'
 import './App.css';
 import Pokedex from './Components/Pokedex'
-import Footer from './Components/Layout/Footer'
+import Footer from './Components/Layout/Footer/Footer'
+import Header from './Components/Layout/Header/Header'
 import {connect} from 'react-redux'
 import { withRouter } from "react-router"
 import { compose } from 'redux'
@@ -13,6 +14,7 @@ import {GetPokemonsList, GetActivePokemon, getPokemonTypes, ClearPokemonsList} f
 function App(props) {
   return (
     <div className="App" >
+        <Header/>
         <Pokedex {...props}/>
         <Footer
          />
