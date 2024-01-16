@@ -25,7 +25,7 @@ function Footer(props) {
                 <li><a href="#">Contact</a></li>
             </ul>
             </div>
-            <span className="copyright">© Copyright 2023 by Yurii Shushanskyi</span>
+            <span className="copyright">© Copyright 2024 by Yurii Shushanskyi</span>
         </div>
         </footer>
 
