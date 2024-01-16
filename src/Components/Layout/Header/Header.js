@@ -15,16 +15,31 @@ function Header(props) {
                     width={'50px'}
                 />
             </button>; */}
-            <div className='logo' >
-                logo
+            <div className='logo-wrap' >
+            <a href="#">
+            <img
+                    src={Logo}
+                    alt='logo'
+                    className='logo'
+                />
+                <div className='logo-name' >
+                    PokeDexNFT
+                </div>
+            </a>
+
             </div>
-            <button className='connect-button' >
+            <div className='' >
+            </div>
+            <button 
+                className='connect-button'
+                onClick={() => {alert('COMING SOON')}}
+            >
                 <img
                     src={MetamaskLogo}
                     alt='metamask_logo'
-                    width={'50px'}
+                    className='logo-img'
                 />
-                Login with Metamask
+                Connect Wallet
                 </button>
 
         </header>
